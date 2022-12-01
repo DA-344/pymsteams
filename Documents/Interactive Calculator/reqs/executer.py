@@ -6,6 +6,6 @@ operacion = str(input("""¿Qué operación he de ejecutar?
 
 def ejecutar():
     try:
-        calc(oper=operacion)
+        return calc(oper=operacion)
     except Exception as e:
-        print(e)
+        return e

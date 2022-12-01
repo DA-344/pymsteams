@@ -20,8 +20,4 @@ def calc(oper:str):
     except:
         raise CouldNotResolveError(oper)
 
-    print("""Operación:
-    {}
-    
-Resultado:
-    {}""".format(oper, res))
+    return res
