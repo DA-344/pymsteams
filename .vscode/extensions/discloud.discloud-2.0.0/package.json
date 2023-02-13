@@ -1,0 +1,489 @@
+{
+	"name": "discloud",
+	"displayName": "Discloud",
+	"icon": "resources/icons/discloudlogo.png",
+	"galleryBanner": {
+		"color": "#0b0b0b",
+		"theme": "dark"
+	},
+	"publisher": "discloud",
+	"description": "Somos uma plataforma de nuvem baseada em contêiner que nasceu com a vontade de oferecer hospedagem fácil, rápida, gratuita e de qualidade.",
+	"version": "2.0.0",
+	"repository": "discloud/vscode-discloud",
+	"engines": {
+		"vscode": "^1.75.0"
+	},
+	"sponsor": {
+		"url": "https://discloudbot.com/plans"
+	},
+	"keywords": [
+		"discloud",
+		"discloud.app",
+		"discloudbot",
+		"discord",
+		"host"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:discloud.apps.commit",
+		"onCommand:discloud.apps.copy.id",
+		"onCommand:discloud.apps.delete",
+		"onCommand:discloud.apps.import",
+		"onCommand:discloud.apps.logs",
+		"onCommand:discloud.apps.ram",
+		"onCommand:discloud.apps.refresh",
+		"onCommand:discloud.apps.restart",
+		"onCommand:discloud.apps.start",
+		"onCommand:discloud.apps.status",
+		"onCommand:discloud.apps.stop",
+		"onCommand:discloud.domain.refresh",
+		"onCommand:discloud.subdomain.refresh",
+		"onCommand:discloud.team.commit",
+		"onCommand:discloud.team.copy.id",
+		"onCommand:discloud.team.import",
+		"onCommand:discloud.team.logs",
+		"onCommand:discloud.team.ram",
+		"onCommand:discloud.team.refresh",
+		"onCommand:discloud.team.restart",
+		"onCommand:discloud.team.start",
+		"onCommand:discloud.team.status",
+		"onCommand:discloud.team.stop",
+		"onLanguage:discloud.config",
+		"onLanguage:discloudignore",
+		"onStartupFinished"
+	],
+	"main": "out/extension.js",
+	"l10n": "./l10n",
+	"contributes": {
+		"commands": [
+			{
+				"command": "discloud.create.config",
+				"title": "%command.create.config%",
+				"icon": "$(gear)"
+			},
+			{
+				"command": "discloud.commit",
+				"title": "%command.commit%",
+				"icon": "$(git-commit)"
+			},
+			{
+				"command": "discloud.login",
+				"title": "%command.login%",
+				"icon": "$(log-in)"
+			},
+			{
+				"command": "discloud.upload",
+				"title": "%command.upload%",
+				"icon": "$(cloud-upload)"
+			},
+			{
+				"command": "discloud.apps.commit",
+				"title": "%command.apps.commit%",
+				"icon": "$(git-commit)"
+			},
+			{
+				"command": "discloud.apps.copy.id",
+				"title": "%command.apps.copy.id%",
+				"icon": "$(clippy)"
+			},
+			{
+				"command": "discloud.apps.delete",
+				"title": "%command.apps.delete%",
+				"icon": "$(trash)"
+			},
+			{
+				"command": "discloud.apps.import",
+				"title": "%command.apps.import%",
+				"icon": "$(edit)"
+			},
+			{
+				"command": "discloud.apps.logs",
+				"title": "%command.apps.logs%",
+				"icon": "$(console)"
+			},
+			{
+				"command": "discloud.apps.ram",
+				"title": "%command.apps.ram%",
+				"icon": "$(circuit-board)"
+			},
+			{
+				"command": "discloud.apps.refresh",
+				"title": "%command.apps.refresh%",
+				"icon": "$(refresh)"
+			},
+			{
+				"command": "discloud.apps.restart",
+				"title": "%command.apps.restart%",
+				"icon": "$(debug-restart)"
+			},
+			{
+				"command": "discloud.apps.start",
+				"title": "%command.apps.start%",
+				"icon": "$(debug-start)"
+			},
+			{
+				"command": "discloud.apps.status",
+				"title": "%command.apps.status%",
+				"icon": "$(refresh)"
+			},
+			{
+				"command": "discloud.apps.stop",
+				"title": "%command.apps.stop%",
+				"icon": "$(debug-stop)"
+			},
+			{
+				"command": "discloud.domain.refresh",
+				"title": "%command.domain.refresh%",
+				"icon": "$(refresh)"
+			},
+			{
+				"command": "discloud.subdomain.refresh",
+				"title": "%command.subdomain.refresh%",
+				"icon": "$(refresh)"
+			},
+			{
+				"command": "discloud.team.commit",
+				"title": "%command.team.commit%",
+				"icon": "$(git-commit)"
+			},
+			{
+				"command": "discloud.team.copy.id",
+				"title": "%command.team.copy.id%",
+				"icon": "$(clippy)"
+			},
+			{
+				"command": "discloud.team.import",
+				"title": "%command.team.import%",
+				"icon": "$(edit)"
+			},
+			{
+				"command": "discloud.team.logs",
+				"title": "%command.team.logs%",
+				"icon": "$(console)"
+			},
+			{
+				"command": "discloud.team.ram",
+				"title": "%command.team.ram%",
+				"icon": "$(circuit-board)"
+			},
+			{
+				"command": "discloud.team.refresh",
+				"title": "%command.team.refresh%",
+				"icon": "$(refresh)"
+			},
+			{
+				"command": "discloud.team.restart",
+				"title": "%command.team.restart%",
+				"icon": "$(debug-restart)"
+			},
+			{
+				"command": "discloud.team.start",
+				"title": "%command.team.start%",
+				"icon": "$(debug-start)"
+			},
+			{
+				"command": "discloud.team.status",
+				"title": "%command.team.status%",
+				"icon": "$(refresh)"
+			},
+			{
+				"command": "discloud.team.stop",
+				"title": "%command.team.stop%",
+				"icon": "$(debug-stop)"
+			}
+		],
+		"configuration": [
+			{
+				"title": "Discloud",
+				"properties": {
+					"discloud.token": {
+						"type": "string",
+						"default": "",
+						"markdownDescription": "%config.token.description%"
+					},
+					"discloud.auto.refresh": {
+						"type": "number",
+						"default": 60,
+						"title": "%config.auto.refresh.title%",
+						"markdownDescription": "%config.auto.refresh.description%"
+					}
+				}
+			}
+		],
+		"grammars": [
+			{
+				"language": "discloud.config",
+				"scopeName": "source.discloud",
+				"path": "./syntaxes/dc.tmLanguage.json"
+			},
+			{
+				"language": "discloudignore",
+				"scopeName": "discloudignore",
+				"path": "./syntaxes/di.tmLanguage.json"
+			}
+		],
+		"languages": [
+			{
+				"id": "discloudignore",
+				"filenames": [
+					".discloudignore"
+				],
+				"icon": {
+					"dark": "resources/icons/discloud_icon.svg",
+					"light": "resources/icons/discloud_icon.svg"
+				}
+			},
+			{
+				"id": "discloud.config",
+				"filenames": [
+					"discloud.config"
+				],
+				"icon": {
+					"dark": "resources/icons/discloud_icon.svg",
+					"light": "resources/icons/discloud_icon.svg"
+				}
+			},
+			{
+				"id": "Discloud",
+				"filenames": [
+					"discloud"
+				],
+				"icon": {
+					"dark": "resources/icons/discloud_icon.svg",
+					"light": "resources/icons/discloud_icon.svg"
+				}
+			}
+		],
+		"menus": {
+			"view/item/context": [
+				{
+					"command": "discloud.apps.commit",
+					"when": "view == discloud-apps"
+				},
+				{
+					"command": "discloud.apps.copy.id",
+					"when": "view == discloud-apps"
+				},
+				{
+					"command": "discloud.apps.delete",
+					"when": "view == discloud-apps"
+				},
+				{
+					"command": "discloud.apps.import",
+					"group": "inline",
+					"when": "view == discloud-apps"
+				},
+				{
+					"command": "discloud.apps.logs",
+					"group": "inline",
+					"when": "view == discloud-apps"
+				},
+				{
+					"command": "discloud.apps.ram",
+					"when": "view == discloud-apps"
+				},
+				{
+					"command": "discloud.apps.restart",
+					"when": "view == discloud-apps"
+				},
+				{
+					"command": "discloud.apps.start",
+					"when": "view == discloud-apps"
+				},
+				{
+					"command": "discloud.apps.status",
+					"group": "inline",
+					"when": "view == discloud-apps"
+				},
+				{
+					"command": "discloud.apps.stop",
+					"when": "view == discloud-apps"
+				},
+				{
+					"command": "discloud.team.commit",
+					"when": "view == discloud-teams"
+				},
+				{
+					"command": "discloud.team.copy.id",
+					"when": "view == discloud-teams"
+				},
+				{
+					"command": "discloud.team.import",
+					"group": "inline",
+					"when": "view == discloud-teams"
+				},
+				{
+					"command": "discloud.team.logs",
+					"group": "inline",
+					"when": "view == discloud-teams"
+				},
+				{
+					"command": "discloud.team.ram",
+					"when": "view == discloud-teams"
+				},
+				{
+					"command": "discloud.team.restart",
+					"when": "view == discloud-teams"
+				},
+				{
+					"command": "discloud.team.start",
+					"when": "view == discloud-teams"
+				},
+				{
+					"command": "discloud.team.status",
+					"group": "inline",
+					"when": "view == discloud-teams"
+				},
+				{
+					"command": "discloud.team.stop",
+					"when": "view == discloud-teams"
+				}
+			],
+			"view/title": [
+				{
+					"command": "discloud.apps.refresh",
+					"when": "view == discloud-apps",
+					"group": "navigation"
+				},
+				{
+					"command": "discloud.team.refresh",
+					"when": "view == discloud-teams",
+					"group": "navigation"
+				},
+				{
+					"command": "discloud.domain.refresh",
+					"when": "view == discloud-domains",
+					"group": "navigation"
+				},
+				{
+					"command": "discloud.subdomain.refresh",
+					"when": "view == discloud-subdomains",
+					"group": "navigation"
+				}
+			],
+			"explorer/context": [
+				{
+					"submenu": "discloudsub",
+					"group": "1_modification",
+					"when": "workspaceFolderCount > 0"
+				}
+			],
+			"discloudsub": [
+				{
+					"command": "discloud.commit"
+				},
+				{
+					"command": "discloud.create.config"
+				}
+			]
+		},
+		"submenus": [
+			{
+				"label": "Discloud",
+				"id": "discloudsub"
+			}
+		],
+		"views": {
+			"discloud-activitybar": [
+				{
+					"type": "tree",
+					"id": "discloud-apps",
+					"name": "%view.apps.title%",
+					"visibility": "visible",
+					"when": "config.discloud.token"
+				},
+				{
+					"type": "tree",
+					"id": "discloud-teams",
+					"name": "%view.team.title%",
+					"visibility": "collapsed",
+					"when": "config.discloud.token"
+				},
+				{
+					"type": "tree",
+					"id": "discloud-subdomains",
+					"name": "%view.subdomain.title%",
+					"visibility": "collapsed",
+					"when": "config.discloud.token"
+				},
+				{
+					"type": "tree",
+					"id": "discloud-domains",
+					"name": "%view.domain.title%",
+					"visibility": "collapsed",
+					"when": "config.discloud.token"
+				},
+				{
+					"type": "tree",
+					"id": "discloud-user",
+					"name": "%view.user.title%",
+					"visibility": "collapsed"
+				}
+			]
+		},
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "discloud-activitybar",
+					"title": "Discloud",
+					"icon": "resources/icons/discloud_white_icon.svg"
+				}
+			]
+		},
+		"viewsWelcome": [
+			{
+				"view": "discloud-apps",
+				"contents": "%welcome%",
+				"when": "config.discloud.token"
+			},
+			{
+				"view": "discloud-user",
+				"contents": "%welcome.token.missing%",
+				"when": "!config.discloud.token"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"dependencies": {
+		"@vscode/l10n": "^0.0.11",
+		"adm-zip": "^0.5.10",
+		"archiver": "^5.3.1",
+		"discloud.app": "^0.4.13",
+		"glob": "^8.1.0",
+		"undici": "^5.18.0"
+	},
+	"devDependencies": {
+		"@types/adm-zip": "^0.5.0",
+		"@types/archiver": "^5.3.1",
+		"@types/glob": "^8.0.1",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "^18.13.0",
+		"@types/vscode": "^1.75.0",
+		"@typescript-eslint/eslint-plugin": "^5.51.0",
+		"@typescript-eslint/parser": "^5.51.0",
+		"@vscode/test-electron": "^2.2.3",
+		"eslint": "^8.34.0",
+		"mocha": "^10.2.0",
+		"typescript": "^4.9.5"
+	},
+	"__metadata": {
+		"id": "04524542-be1f-43d0-b004-88f4fc45ac53",
+		"publisherId": "e94d71d7-147e-44b3-b6a1-5f5cb743abb6",
+		"publisherDisplayName": "Discloud",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1676301067681,
+		"preRelease": false
+	}
+}
